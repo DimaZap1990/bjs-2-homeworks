@@ -1,20 +1,17 @@
+"use strict"
 function solveEquation(a, b, c) {
-  let arr;
-  // код для задачи №1 писать здесь
-  let f = Math.pow(b)-4*a*c
-  if (f<0){
+  let DIS = Math.pow(b,2)-4*a*c;
+  if (DIS<0){
     return [];
-  }else if (f==0) {
-    let [d] = -b/(2*a)
-    return (d);
-  } else if (f>0) {
-    let dis=[g,h]
-    let g = (-b + Math.sqrt(d) )/(2*a)
-    let h = (-b - Math.sqrt(d) )/(2*a)
-    return (dis);
+  }else if (DIS==0) {
+    let answer = [-b/(2*a)];
+    return answer;
+  } else if (DIS>0) {
+    let x1 = (-b + Math.sqrt(DIS) )/(2*a);
+    let x2 = (-b - Math.sqrt(DIS) )/(2*a);
+    let answer=[x1, x2];
+    return answer;
   }
-  return arr; // array
-}
 
 function calculateTotalMortgage(percent, contribution, amount, date) {
   let totalAmount;
@@ -22,4 +19,4 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
   // код для задачи №2 писать здесь
 
   return totalAmount;
-}
+}}
